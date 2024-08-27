@@ -1,0 +1,23 @@
+{
+  "name": "smokcity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-watch-sass": "^1.4.1",
+    "sass": "^1.69.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-uglify": "^3.0.2"
+  }
+}

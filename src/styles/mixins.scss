@@ -1,0 +1,100 @@
+
+@mixin container() {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@mixin object_fit() {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@mixin hookah-el_position() {
+  position: absolute;
+  content: '';
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@mixin bg_position() {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin border_style($color_style, $color_style_shadow) {
+  border: 1px solid $color_style;
+  box-shadow: inset 0 0 5px 2px $color_style_shadow, 0 0 5px 2px $color_style_shadow;
+  padding: 27px;
+  &:hover {
+    box-shadow: inset 0 0 7px 3px $color_style_shadow, 0 0 7px 3px $color_style_shadow;
+  }
+}
+
+@mixin second_title($color_main_text, $size_second_title) {
+  font-size: $size_second_title;
+  font-family: Panton_ExtraBold, sans-serif;
+  color: $color_main_text;
+  font-weight: bold;
+  line-height: 160%;
+  @media screen and (max-width: 426px) {
+    $size_second_title: 20px;
+    font-size: $size_second_title;
+    text-align: center;
+  }
+}
+@mixin third_title($color_style, $size_third_title) {
+  font-size: $size_third_title;
+  font-family: Panton_ExtraBold, sans-serif;
+  color: $color_style;
+  @media screen and (max-width: 426px) {
+    $size_third_title: 18px;
+    font-size: $size_third_title;
+    text-align: center;
+  }
+}
+
+@mixin main_text($color_main_text, $size_main_text) {
+  font-size: $size_main_text;
+  font-family: Montserrat_Regular, sans-serif;
+  color: $color_main_text;
+  line-height: 1.333;
+  @media screen and (max-width: 376px) {
+    $size_main_text: 14px;
+    font-size: $size_main_text;
+  }
+}
+
+@mixin sub_text($color_sub_text, $size_small_text) {
+  font-size: $size_small_text;
+  font-family: Montserrat_Regular, sans-serif;
+  color: $color_sub_text;
+  line-height: 1.364;
+  @media screen and (max-width: 426px) {
+    $size_small_text: 12px;
+    font-size: $size_small_text;
+  }
+}
+
+@mixin btn_style($color_style) {
+  background-color: $color_style;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 0 $color_style_shadow;
+  transition: all 200ms linear;
+  &:hover {
+    border-radius: 4px;
+    box-shadow:  0 4px 10px 4px $color_style_shadow;
+  }
+  &:active {
+    box-shadow: inset  0 0 10px 3px rgba(0, 0, 0, 0.4);
+  }
+}
